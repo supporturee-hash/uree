@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: #20251f; font-family: Arial, Helvetica, sans-serif; }
+button, input, select { font: inherit; }
+.container-shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.soft-shadow { box-shadow: 0 12px 40px rgba(32,37,31,.07); }
+.product-image { background: linear-gradient(145deg,#f7f6f1,#eeece4); }
+a { text-decoration: none; color: inherit; }
