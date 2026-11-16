@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { products } from "@/lib/products";
+export default function Admin(){
+ return <main className="container-shell py-12"><p className="text-xs tracking-[.2em] uppercase text-sage">Store management</p><h1 className="text-4xl font-light mt-2">Admin dashboard preview</h1><p className="text-sm text-stone-500 mt-3">This is a UI preview only. Secure authentication and database-backed permissions must be enabled before public deployment.</p><div className="grid sm:grid-cols-3 gap-4 mt-10">{[["Products",String(products.length)],["Orders","Connect database"],["Sales","Live data pending"]].map(([k,v])=><div key={k} className="bg-cream p-6"><p className="text-xs uppercase tracking-widest text-stone-500">{k}</p><p className="text-2xl mt-3">{v}</p></div>)}</div><div className="mt-10 border border-stone-200 p-6"><h2 className="text-xl mb-4">Product catalogue preview</h2>{products.map(p=><div key={p.id} className="flex justify-between border-t py-3 text-sm"><span>{p.brand} · {p.name}</span><span>৳{p.price.toLocaleString("en-BD")}</span></div>)}</div><Link href="/shop" className="inline-block mt-8 underline">View storefront</Link></main>;
+}
